@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Soar Tutorial - 39th Soar Workshop</title>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<h1>Soar Tutorial</h1>
+			<p class="lead">39th Soar Workshop</p>
+			<hr />
+		</div>
+
+		<div class="container">
+			<h3>Monday-Tuesday May 6-7th <span class="text-muted">@ 9-5 (BBB 1690)</span></h3>
+			<p class="lead">
+				This tutorial provides a whirlwind tour of Soar, including its historical background and context within the cognitive architecture research community.
+				The focus will be on how and why Soar works, including syntax/structure for agents and Soar-enabled applications, as well as hands-on experience with the new components that have been developed over the past few years: reinforcement learning and semantic/episodic long-term memory.
+			</p>
+			<hr />
+		</div>
+
+		<div class="container">
+			<h3>
+				Tutorial Software <a href="tutorial.zip" target="_blank" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a></h3>
+			<p>
+				Click the button to download all the software you'll need for this tutorial.
+				Once downloaded, unzip - ideally the path does not contain spaces and is short (e.g. <code>c:\temp\tutorial</code> or <code>/home/user/tutorial</code>).
+			</p>
+			<p>
+				The only required software is <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">Oracle Java 8</a>.
+				The software <em>should</em> "just work" on Windows, Mac OS, and Ubuntu (>= 14).
+				Some platform-specific notes:
+			</p>
+			<h4>Windows</h4>
+			<ul>
+				<li>To run: double-click <code>debugger.bat</code> or <code>eater.bat</code></li>
+				<li>Depending on existing applications, you <em>may</em> need to download and install the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145" target="_blank">Visual C++ Redistributable for Visual Studio 2015</a></li>
+				<li>Spaces or very long paths may cause the software not to run</li>
+			</ul>
+			<h4>Mac OS</h4>
+			<ul>
+				<li>To run: open the <code>Terminal</code> application, run <code>path/to/tutorial/eater.sh</code> or <code>debugger.sh</code> (you can also right-click, Open With, Other, select Terminal from Applications/Utilities)</li>
+			</ul>
+			<h4>Ubuntu Linux</h4>
+			<ul>
+				<li>To run: open the <code>Terminal</code> application, run <code>path/to/tutorial/eater.sh</code> or <code>debugger.sh</code></li>
+				<li>To install the Oracle JDK, execute the following commands in the terminal:<br /><br />
+					<pre>
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer</pre></li>
+			</ul>
+			<div class="row">&nbsp;</div>
+			<hr />
+		</div>
+
+		<div class="container">
+			<h3>
+				WordNet for Semantic Memory <a href="wn.soar" target="_blank" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a></h3>
+			<p>
+				Right-click the button and choose "Save As" to download a file that adds the contents of WordNet to Soar's Semantic Memory.
+			</p>
+			<p class="bg-info">
+				Note: the file is quite large (&gt;80MB), so this process may take several minutes on a slow connection.
+			</p>
+			<hr />
+		</div>
+
+		<div class="container">
+			<h3>Slides</h3>
+
+			<p class="bg-info">Hard copies of all slides will be made available at the tutorial.</p>
+			<p>
+				Download <a href="https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/oxygen3a" target="_blank">Eclipse IDE for Java Developers</a> to participate in the SML tutorial.
+			</p>
+
+			<!-- <p class="lead">Coming soon.</p> -->
+
+			<div class="list-group">
+				<a href="Tutorial-2019-SW-intro.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Introduction</h4>
+				</a>
+				<a href="Tutorial-2019-SW-basic-small.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Soar Basics</h4>
+				</a>
+				<a href="Tutorial-2019-SW-RL.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Reinforcement Learning in Soar</h4>
+				</a>
+				<a href="Tutorial-2019-SW-substates.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Impasses and Substates</h4>
+				</a>
+				<a href="Tutorial-2019-SW-chunking.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Chunking</h4>
+				</a>
+				<a href="Tutorial-2019-SW-SMem.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Semantic Memory</h4>
+				</a>
+				<a href="Tutorial-2019-SW-EpMem.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Episodic Memory</h4>
+				</a>
+				<a href="Tutorial-2019-SW-SML.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Soar Markup Language (SML)</h4>
+				</a>
+				<!-- <a href="Tutorial-2018-SW-agents.pdf" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">How to Build a Moderate Sized Soar Agent</h4>
+				</a> -->
+			</div>
+
+			<hr />
+		</div>
+
+		<div class="container">
+			<h3>Useful Links</h3>
+
+			<div class="list-group">
+				<a href="http://soar.eecs.umich.edu/" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">Soar Home</h4>
+					<p class="list-group-item-text">A source for news, publications, and downloads.</p>
+				</a>
+
+				<a href="https://mitpress.mit.edu/books/soar-cognitive-architecture" target="_blank" class="list-group-item">
+					<h4 class="list-group-item-heading">The MIT Press: The Soar Cognitive Architecture</h4>
+					<p class="list-group-item-text">The definitive presentation of Soar from theoretical and practical perspectives, providing comprehensive descriptions of fundamental aspects and new components.</p>
+				</a>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</body>
+</html>
