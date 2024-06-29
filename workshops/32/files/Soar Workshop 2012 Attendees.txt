@@ -1,0 +1,51 @@
+Mazin Assanie      	University of Michigan                                       	mazina@umich.edu                    
+Christopher Barnes 	L3 Communications                                            	c.barnes@l-3com.com                 
+Bob Bechtel        	Soar Technology, Inc.                                        	bob.bechtel@soartech.com            
+Mitchell Bloch     	University of Michigan                                       	bazald@umich.edu                    
+Adam Bryant        	Air Force Research Lab, Wright-Patterson Air Force Base, Ohio	adambryant11@gmail.com              
+Heather Bryant     	                                                             	mamaduck60@gmail.com                
+Jonathan Carbone   	SoarTech                                                     	jon.carbone@soartech.com            
+Roger Cote         	Educational consulting (private company)                     	jrdcote@gmail.com                   
+Jacob Crossman     	Soar Technology                                              	jcrossman@soartech.com              
+Nate Derbinsky     	University of Michigan                                       	nlderbin@umich.edu                  
+JP Eldous          	JCTech                                                       	j.p.eldous@gmail.com                
+Alex Feild         	NAVSEA                                                       	alexander.feild1@navy.mil           
+J.T. Folsom-Kovarik	Soar Technology, Inc.                                        	jeremiah.folsom-kovarik@soartech.com
+Rich Frederiksen   	Soar Technology, Inc.                                        	rdf@soartech.com                    
+Erika Glenn        	                                                             	ehmhunt@gmail.com                   
+Nathan Glenn       	BYU                                                          	garfieldnate@gmail.com              
+Osama Haddadin     	L-3 Communications                                           	osama.s.haddadin@l-3com.com         
+John Hale          	Cornell University                                           	jthale@cornell.edu                  
+Joshua Haley       	Soar Technologies                                            	joshua.haley@soartech.com           
+Johnicholas Hines  	Hobbyist                                                     	johnicholas.hines@gmail.com         
+Matt Hollingsworth 	Soar Technology                                              	matt.hollingsworth@soartech.com     
+Rahul Jha          	                                                             	rahuljha@umich.edu                  
+Randolph Jones     	Soar Technology                                              	rjones@soartech.com                 
+Chris Kawatsu      	Soar Tech                                                    	chris.kawatsu@soartech.com          
+Jack Kennedy       	University of Michigan                                       	jacku@umich.edu                     
+James Kirk         	University of Michigan                                       	jrkirk@umich.edu                    
+John Laird         	University of Michigan                                       	laird@umich.edu                     
+Matthew Lanting    	SoarTech                                                     	matt.lanting@soartech.com           
+Richard Lewis      	University of Michigan                                       	rickl@umich.edu                     
+Justin Li          	University of Michigan                                       	justinnhli@gmail.com                
+Deryle Lonsdale    	Brigham Young University                                     	lonz@byu.edu                        
+Bob Marinier       	SoarTech                                                     	bob.marinier@soartech.com           
+Christine McGinn   	Soar Tech                                                    	christine.mcginn@soartech.com       
+Pat McLaughlin     	Soar Technology                                              	mclaughlin@soartech.com             
+Aaron Mininger     	University of Michigan                                       	mininger@umich.edu                  
+Shiwali Mohan      	University of Michigan                                       	shiwali@umich.edu                   
+Charles Newton     	SoarTech                                                     	charles.newton@soartech.com         
+Alex Pritchard     	Soartech                                                     	alex.pritchard@soartech.com         
+Leon Pryor         	Soar Technology                                              	leon.pryor@soartech.com             
+Ben Purman         	Soar Technology                                              	ben.purman@soartech.com             
+Michael Quist      	Soar Technology, Inc.                                        	quist@soartech.com                  
+David Richmond     	L-3 Communications                                           	david.e.richmond@l-3com.com         
+Patrick Smith      	L-3 Communications, Inc.  CSW                                	patrick.j.smith@L-3com.com          
+Glenn Taylor       	SoarTech                                                     	glenn@soartech.com                  
+Patrick Theisen    	SoarTech                                                     	patrick.theisen@soartech.com        
+Alex Turner        	                                                             	bluechill@me.com                    
+Mike van Lent      	SoarTech                                                     	vanlent@soartech.com                
+Sam Wintermute     	Soar Technology                                              	sam.wintermute@soartech.com         
+Bob Wray           	Soar Tech                                                    	wrayre@acm.org                      
+Joseph Xu          	University of Michigan                                       	josephzxu@gmail.com                 
+Peng Xu            	ExxonMobil Corporate Strategic Research                      	peng.xu@exxonmobil.com
