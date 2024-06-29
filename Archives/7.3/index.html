@@ -1,0 +1,111 @@
+<Html>
+<Head>
+<Title>Soar</Title>
+<!-- Author: soar -->
+</Head>
+<Body>
+
+<h1><b>Soar Version 7.3 Release</b></h1>
+<p>
+This is the working page for the Soar 7.3 Release. <a HREF="Soar73.RelNotes">Release
+Notes</a> are under construction and will be available shortly. 
+<p>
+This is the last supported release of Soar 7.  Soar 8 is also now available
+and the first few releases of Soar 8 will include a compatibility mode
+that allows users to run using the Soar 7 methodology.  Eventually
+we expect all users to migrate to the Soar 8 architecture, and the
+Soar 7 compatibility will be removed from the kernel.  
+See the <!a HREF="Soar73.RelNotes">Soar 7.3 Release Notes</a> for information on the differences between Soar
+7 and Soar 8.
+<p>
+Soar 7.3 requires that Tcl and Tk be installed on unix and Windows systems.
+The Mac version has Tcl included and does not require a specific
+installation process for Tcl.   <b>It is recommended that users install <a HREF="http://www.scriptics.com/software/8.0.html">Tcl/Tk
+8.0</a>.</b>  <b>The pre-built binaries below require Tcl 8.0.</b>  If you are
+upgrading from Soar 7.0.*, or don't have Soar at all yet, you will
+have to check to see if you have Tcl, and if so, what version you have.
+ If you are upgrading from Soar 7.1 or Soar 7.2, then you already have
+Tcl 7.6 and Tk 4.2 installed.  Soar 7.3 is also compatible with Tcl
+7.6 and Tk 4.2, but it may require that you rebuild Soar, linking
+with Tcl7.6/Tk4.2. The binaries provided below were built for Tcl/Tk8.0.
+The Linux binary will work under either Tcl 8.0 or Tcl 7.6, but I 
+don't think the Windows and Mac binaries are compatible with Tcl 7.6.
+The README.(systype) files in the distribution will tell you how to
+check for Tcl on your system, and what to do if you don't have it.
+<hr>
+
+<h1>Soar 7.3 for Windows</h1>
+<li><a HREF="Soar73.EXE"><strong>Soar73.EXE</strong></a>.
+(1.8 Mb) The self-installing binaries for Windows 95 / 98/Windows NT
+<p>
+The standard installation location for Tcl/Tk on Windows is in "C:\Program
+Files\TCL" If you don't see Tcl there, first do a File Find on your
+system to see if someone installed Tcl somewhere else. If you don't
+have Tcl8.0 already installed on your system, grab the <a HREF="ftp://ftp.scriptics.com/pub/tcl/tcl8_0/tcl804.exe"><strong>Windows
+95, and Windows NT self-extracting installer (tcl804.exe)</strong></a>:
+(about 1.75Mbytes) The file is a self-extracting executable. It will
+install the Tcl and Tk libraries, the <code>wish</code> and <code>tclsh</code>
+programs, and documentation. 
+<p>
+If at all possible, use the defaults for file locations and installation
+settings. Soar-7.3 will require no reconfiguration for your Windows
+system if you have installed Tcl/Tk on the C: drive (specifically in
+"C:\Program Files\TCL"), and if Soar is unzipped to c:\ (it will default
+to a folder called Soar-7.3). Just open the Soar-7.3 folder and dbl-click
+on the Soar icon (a feather, for now) to start Soar. You my have to
+first edit the "properties" of the Soar shortcut to make sure the pathname
+of the executable is valid for your machine.  If you need to use locations
+other than the defaults, or if you aren't able to run Soar by dbl-clicking
+on the Soar icon, see the <a HREF="README73.Win">README.Win</a>
+file for information about what you will need to change to run Soar.
+
+<hr>
+
+<h1>Soar 7.3 for Unix </h1>
+<li><a href="Soar73.tgz"><strong>Soar73.tgz</strong></a>.
+(1.1 Mb) A gnu-zipped tar file which includes the precompiled libraries
+for Linux. 
+<p>
+See the <a HREF="README73.Unix">README.Unix</a> file
+for information on running Soar and on building Soar for other Unix
+systems. If there is enough demand, we can possibly build and post
+libraries for SunOS 4.1.3, Solaris 5.5.1, Linux 2.0.30, and IRIX 5.3.
+If you need to install Tcl8.0, you can obtain the code and follow the
+instructions found on the <a HREF="http://www.scriptics.com/software/8.0.html"><strong>Scriptics
+Tcl 8.0 Download Page</strong></a>. About a third of the way down that
+page you'll find the info for Unix sources. 
+<hr>
+<h1>Soar 7.3 for Macintosh </h1>
+<strong> The combination of upgrading to Code Warrior Pro 3 and to Tcl 8.0.4
+was causing fits for building Soar-7.3 on the Mac.  Everything compiled just
+fine, but the linker could not find the standard library functions, eventhough
+the libraries are specified in the build instructions.  So for the Macintosh, 
+Soar 7.3 was built with Tcl 7.6 / Tk 4.2.  No Soar functionality is lost,
+but users will not benefit from the improvements to Tcl on the Mac platform.
+</strong>
+<p> 
+<li><a HREF="Soar73.sea.hqx"><strong>Soar73.sea.hqx</strong></a>.
+(5.7 Mb) A BinHex 4.0 self-extracting archive that includes the binary
+distributions for Power PC Macs. This archive also includes the Tcl/Tk
+Installer for installing Tcl7.6/Tk4.2. (If you already have this version
+of Tcl/Tk installed, you can just dump the Installer program in the
+trash.) 
+<p>
+
+Download and extract the Soar archive file (by dbl-clicking on the
+Soar-73.sea icon), which will create a folder called Soar-7.3.  If you
+don't have Tcl 7.6 already installed, dbl-click on the Tcl/Tk Installer.
+Then click on the "SoarMac" icon to start Soar with the full TSI, or click on
+"SoarTutorial" to create a single soar agent and hide the Control Panel
+and console windows.  See the <a HREF="README73.Macintosh">README.Macintosh</a>
+file for a few more details on how to get started. 
+<p>
+ This Mac distribution was modified
+specifically for CogSci 99, to update the analogy demos,  and automatically
+create a single Soar agent for the tutorial.
+
+<hr>
+
+</Body>
+</Html>
+
