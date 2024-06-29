@@ -1,0 +1,119 @@
+<Html>
+<Head>
+<Title>Soar</Title>
+<!-- Author: soar -->
+</Head>
+<Body>
+
+<p>
+
+<h1><b>Soar Version 8.4 Release</b></h1>
+<p>
+The upgrade from Soar 8.3 to Soar 8.4 should be transparent for most
+users.  However, under the hood, there are a number of improvements in
+the Soar 8.4 release. These modifications are described in the <a
+HREF="Soar84.RelNotes">Soar 8.4 Release Notes</a>.  Note that the 
+default binaries accessable via this website are completely backward 
+compatable with Soar8.3, and do not take advantage of Soar8.4's new features.
+<i>This means that unless you intend to rebuild Soar, or take advantage of
+the new API, there is no reason to change from Soar 8.3 to Soar 8.4.</i>
+<!--
+<p>
+For help getting started writing Soar 8 code, start with <a HREF="tutorial.html">The Soar 8 Tutorial</a>.
+-->
+<p>
+
+Soar 8.4 requires that Tcl and Tk be installed on all systems (Mac,
+Windows and Unix). <b>It is recommended that users install 
+<a HREF="http://www.scriptics.com/software/8.0.html">Tcl/Tk
+8.0</a>.</b> <b>The pre-built binaries below require Tcl 8.0</b>. If
+you are upgrading from Soar 7.0.*, or don't have Soar at all yet, you
+will have to check to see if you have Tcl, and if so, what version
+you have. If you are upgrading from Soar 7.1 or Soar 7.2, then you
+already have Tcl 7.6 and Tk 4.2 installed. Soar 8.4 is also compatible
+with Tcl 7.6 and Tk 4.2, but it may require that you rebuild Soar,
+linking with Tcl7.6/Tk4.2. The binaries provided below were built for
+Tcl/Tk8.0. The Linux binary will work under either Tcl 8.0 or Tcl 7.6, but I 
+don't think the Windows and Mac binaries are compatible with Tcl 7.6.
+The README.(systype) files in the distribution will tell
+you how to check for Tcl on your system, and what to do if you don't
+have it. 
+
+<p> Documentation for the C-Level api, can be found both as 
+<a href="http://www.eecs.umich.edu/~soar/sitemaker/docs/misc/soar84-api-docs/index.html">html</a> and as 
+a <a href="soar84-api-docs.tgz">.tgz archive</a>
+<hr>
+
+<h1>Soar 8.4 for Windows</h1>
+<li><a HREF="Soar841.zip"><strong>Soar84.zip</strong></a>.
+(1.8 Mb) The zipped source and binaries for
+Windows 9x / 2000 / Windows NT (WinZip is required for decompression)
+
+<p>
+The standard installation location for Tcl/Tk on Windows is in "C:\Program
+Files\TCL" If you don't see Tcl there, first do a File Find on your
+system to see if someone installed Tcl somewhere else. If you don't
+have Tcl8.0 already installed on your system, grab the <a HREF="ftp://ftp.scriptics.com/pub/tcl/tcl8_0/tcl804.exe"><strong>Windows
+95, and Windows NT self-extracting installer (tcl804.exe)</strong></a>:
+(about 1.75Mbytes) The file is a self-extracting executable. It will
+install the Tcl and Tk libraries, the <code>wish</code> and <code>tclsh</code>
+programs, and documentation. 
+<p>
+If at all possible, use the defaults for file locations and installation
+settings. Soar-8.4 will require no reconfiguration for your Windows
+system if you have installed Tcl/Tk on the C: drive (specifically in
+"C:\Program Files\TCL"), and if Soar is unzipped to c:\ (it will default
+to a folder called Soar-8.4). Just open the Soar-8.4 folder and dbl-click
+on the Soar icon (a feather, for now) to start Soar. You my have to
+first edit the "properties" of the Soar shortcut to make sure the pathname
+of the executable is valid for your machine. If you need to use locations
+other than the defaults, or if you aren't able to run Soar by dbl-clicking
+on the Soar icon, see the <a HREF="README84.Win">README.Win</a>
+file for information about what you will need to change to run Soar.
+
+<hr>
+
+<h1>Soar 8.4 for Unix </h1>
+<li><a HREF="Soar841.tgz"><strong>Soar84.tgz</strong></a>.
+(1.4 Mb) A gnu-zipped tar file which includes the precompiled Soar libraries
+for Linux. See the <a HREF="README84.Unix">README.Unix</a> file
+for information on running Soar and on building Soar for other Unix
+systems. If there is enough demand, we can possibly build and post
+libraries for SunOS 4.1.3, Solaris 5.5.1, Linux 2.0.30, and IRIX 5.3.
+If you need to install Tcl8.0, you can obtain the code and follow the
+instructions found on the <a HREF="http://www.scriptics.com/software/8.0.html"><strong>Scriptics
+Tcl 8.0 Download Page</strong></a>. About a third of the way down that
+page you'll find the info for Unix sources. 
+<hr>
+
+<h1>Soar 8.4 for Macintosh </h1>
+<strong> The combination of upgrading to Code Warrior Pro 3 and to Tcl 8.0.4
+is causing fits for building Soar-8.4 on the Mac.  Everything compiles just
+fine, but the linker cannot find the standard library functions, eventhough
+the libraries are specified in the build instructions.  Several people have
+made good suggestions, but I still can't build Soar-8.4 with Tcl 8.0.
+However, Soar-8.4 WILL build with Tcl 7.6.  So for the Macintosh, Soar-8.4
+is being released with Tcl 7.6 / Tk 4.2.  There is no loss in functionality
+for Soar, but Mac users will not have the added advantages of using Tcl 8.0.
+
+If anyone has suggestions for linking Soar with Tcl 8.0, or would like to try
+the build at their site, please send email to <a href="mailto:soar-group@lists.sourceforge.net"> soar-group@lists.sourceforge.net</a>.</strong>
+<p> 
+<li><a HREF="Soar84.sea"><strong>Soar84.sea</strong></a>.
+(6.1 Mb) A BinHex self-extracting archive that includes the binary
+distributions for Power PC Macs. This archive also includes the Tcl/Tk 
+Installer for installing Tcl7.6/Tk4.2.  (If you already have this version 
+of Tcl/Tk installed, you can just dump the Installer program in the trash.) 
+<p>
+Download and extract the Soar archive file (by dbl-clicking on the
+Soar-84.sea icon), which will create a folder called "soar-8.4". 
+The standard installation location for Tcl/Tk on Macs is in "System
+Folder/Extensions/Tool Command Language/" If you don't find a "Tool
+Command Language" folder there, or you don't have Tcl 7.6 / Tk 4.2,
+open the soar-8.4 folder and double-click on the Tcl installer.  Once
+Tcl has been installed, go back to the soar-8.4 folder and click 
+on the "SoarMac" icon to start Soar. See the 
+<a HREF="README84.Macintosh">README.Macintosh</a>
+file for more details on how to get started. 
+
+</body></html>
