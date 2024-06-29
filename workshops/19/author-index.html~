@@ -1,0 +1,190 @@
+<HTML>
+<HEAD>
+<TITLE>Soar Workshop 19 Author Index</TITLE>
+</HEAD>
+<BODY>
+<!--#include file="footer.inc" -->
+<p>
+<hr>
+<p>
+
+<B><FONT SIZE=4><P ALIGN="CENTER"> </P>
+<P>&#9;</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER">19<SUP>th</SUP> North American Soar Workshop Proceedings</P>
+<P ALIGN="CENTER">Author Index</P>
+</B></FONT><FONT SIZE=2></FONT>
+<P ALIGN="RIGHT"><TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=600>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:mazina@umich.edu">Assanie, Mazin</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="assanie-FinalWorkshop.pdf">Teaching an Agent via Constrained Interactive Natural Language Dialog</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:bhattach@umich.edu">Bhattacharyya, Sayan</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><a href="bhattach-SOARWKS.HP9.pdf">Comparing Soar with BDI Architectures</a></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP" HEIGHT=13>
+<P><A HREF="mailto:rchong@soartech.com">Chong, Ron</A></TD>
+<TD WIDTH="74%" VALIGN="TOP" HEIGHT=13>
+<P><A HREF="./rchong-slides.pdf">Towards a Model of Fear in Soar </A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:kcoulter@umich.edu">Coulter, Karen</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="coulter-SoarUpdate.pdf">Soar Support Update</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:mhgoodma@colby.edu">Goodwin, Mitchell</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="Goodman.pdf">Intelligent, Believable, Social Agents in a Real-Time 3-D World</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP" HEIGHT=5>
+<P><A HREF="mailto:gratch@isi.edu">Gratch, Jonathan</A></TD>
+<TD WIDTH="74%" VALIGN="TOP" HEIGHT=5>
+<P><A HREF="gratch-ebaa99.pdf">Why You Should Buy an Emotional Planner</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:gratch@isi.edu">Gratch, Jonathan</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="gratch-soar99-stance.pdf">How to Make Your Planner Rude</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:hill@isi.edu">Hill, Randy</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="hill-Soar99attention.pdf">Modeling Perceptual Attention in Virtual Humans</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:hill@isi.edu">Hill, Randy</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="Hill-Soar99C2modeling.pdf">Command and Control Modeling in Soar</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:rjones@colby.edu">Jones, Randolph M.</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="jones-Fatigue.pdf">Real-time Modeling of Reaction Time in Soar: Support for Psychological Models of Fatigue </A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:tony.kalus@port.ac.uk">Kalus, Tony</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="kalus-viscreens-99.pdf">viSoar - an Integrated Soar Development Environment</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:tony.kalus@port.ac.uk">Kalus, Tony</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="kalus-soaruse99.pdf">Soar Usage Outside the USA</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP" HEIGHT=7>
+<P><A HREF="mailto:bill.kennedy@hq.doe.gov">Kennedy, Bill</A></TD>
+<TD WIDTH="74%" VALIGN="TOP" HEIGHT=7>
+<P><A HREF="Kennedy.pdf">Manually Excising Soar Chunks During Long-Term Learning</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:yjkim@isi.edu">Kim, Youngjun</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="youngjun.pdf">How Long Does an Agent Focus on a Specific Task</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:laird@umich.edu">Laird, John</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="laird-VisualXSoar.pdf">Visual Soar</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:lons@byu.edu">Lonsdale, Deryle</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="lonsdale-soar19.pdf">Analogical Modeling of Language in Soar</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:nath_g@arch.su.edu.au">Nath, Gourabmoy</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="gnath.pdf">Situated Learning Approach to Designing Using Soar</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:takehiko@rudolph.brl.ntt.co.jp">Ohno, Takehiko</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="ohno1.pdf">Toward Modeling Real-Time Game Player with Soar</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP" HEIGHT=13>
+<P><A HREF="mailto:pynadath@isi.edu">Pynadath, David</A></TD>
+<TD WIDTH="74%" VALIGN="TOP" HEIGHT=13>
+<P><A HREF="pynadath-SOAR-WORKSHOP99.pdf">Toward Team-Oriented Programming</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:ftit@umich.edu">Roytman, Sergej</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="roytman.pdf">Soar Agents for a Driving Simulator</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:Karl_Schwamb@ers.com">Schwamb, Karl</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="schwamb-Sw19pt97.pdf">ExpLore Reasoning Systems, Inc. Update</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:rtedrake@umich.edu">Tedrake, Russ</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="tedrake-19thSoarWorkshopTalk.pdf">Soaring with Descent3</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP" HEIGHT=5>
+<P><A HREF="mailto:vanlent@umich.edu">van Lent, Mike</A></TD>
+<TD WIDTH="74%" VALIGN="TOP" HEIGHT=5>
+<P><A HREF="vanlent-SWS-Thesis.pdf">Learning by Observation in Complex Domains</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:vanlent@umich.edu">van Lent, Mike</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="vanlent-SWS-SocketIO-HC.pdf">SocketIO and You</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:vanlent@umich.edu">van Lent, Mike</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="vanlent-SWS-Games.pdf">Update on the Soar/Games Project</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:swallace@umich.edu">Wallace, Scott</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="wallace-SoarWS_scc(15min).pdf">Comparing Soar with CLIPS</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:swallace@umich.edu">Wallace, Scott</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="wallace-SoarLite(5min).pdf">Soar Lite</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:whitney@isi.edu">Whitney, Richard</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><a href="whitney.pdf">Soaring with Stealth</a></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:wrayre@acm.org">Wray, Robert</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="wrayre.pdf">Benchmarking Soar: Using Soar's Timers</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:R.M.Young@herts.ac.uk">Young, Richard M.</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><A HREF="young-SoarWS99_ACT_OHPs.pdf">Brief Introduction to ACT-R for Soarers: Soar and ACT-R still have much to learn from each other</A></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:zhang@isi.edu">Zhang , Weixiong (Wayne)</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><a href="zhang-Clustering.pdf">Gaining Battlefield Awareness Through Entity Clustering and Classification</a></TD>
+</TR>
+<TR><TD WIDTH="26%" VALIGN="TOP">
+<P><A HREF="mailto:zhang@isi.edu">Zhang , Weixiong</A></TD>
+<TD WIDTH="74%" VALIGN="TOP">
+<P><a href="zhang-dynamite.pdf">DYNAMITE: Automated Negotiating Teams</A></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>&nbsp;</P>
+<P><A HREF="proceedings.html">Go to Online Proceedings</A></P>
+<P><A HREF="welcome.html">Go back to Proceedings Welcome Page</A></P>
+<P><A HREF="http://ai.eecs.umich.edu/soar">Back to Soar Home Page</A></P>
+<p><hr>
+
+<!--#include file="footer.inc" -->
+
+
+</BODY>
+</HTML>
