@@ -1,0 +1,72 @@
+Win32 Tcl 7.6 and Tk 4.2 Rebuilds
+=================================
+
+Chris Waterson
+waterson@eecs.umich.edu
+4/9/97
+
+
+Overview
+--------
+
+I believe that the Win32 distribution builds of Tcl 7.6 and Tk 4.2 are
+buggy, and currently have a post on comp.lang.tcl with a report
+in. The executables and dynamic link libraries included here seem to
+work properly.
+
+
+Specifics
+---------
+
+Here's the problem. You can load the SOAR71.DLL into TCLSH76.EXE or
+WISH42.EXE (indirectly via "package require Soar" or directly via
+"load soar71.dll"), and run Soar without problem. Unfortunately, when
+you finally exit the process, you get a segfault in CW3215.DLL. This
+is really nothing more than an inconvenience, but it's annoying and,
+frankly, it makes Soar look bad!
+
+I assumed that this was due a memory bug or something, so rolled up my
+sleeves, downloaded the full source distributions for Tcl 7.6 and Tk
+4.2, compiled them in debug mode and set to work tracking down the
+problem. Problem is, it went away! Furthermore, and much to my
+surprise, there was no CW3215.DLL that even got built! So I recompiled
+the stuff with optimizations enabled and still, couldn't reproduce the
+bug.
+
+So here are my "rebuilt" versions of Tcl 7.6 and Tk 4.2. The only
+difference (I think) is that I compiled these versions with Microsoft
+VC++ 4.2 and they didn't. In fact, given the "CW" in CW3215.DLL, I'm
+guessing that they *cross-compiled* from CodeWarrior. But who knows.
+
+
+Installation
+------------
+
+1. Replace the TCLSH76.EXE and WISH42.EXE files in "C:\Program
+Files\Tcl\bin" (or wherever you've installed Tcl) with the ones
+included with this distribution.
+
+2. Replace the following DLLs in \WINDOWS\SYSTEM with the ones
+included with this distribution:
+
+	TCL76.DLL
+	TCL76PIP.DLL
+	TK42.DLL
+
+3. If you don't already have it, copy MSVCRT.DLL to your
+\WINDOWS\SYSTEM directory.
+
+4. If you want, you can delete CW3215.DLL from your \WINDOWS\SYSTEM
+directory, but this might screw up a Tcl/Tk 8.0a2 install. It's small
+and doesn't do much harm left there, I guess.
+
+
+
+Resolution
+----------
+
+We'll see if Sun Labs (or anyone) responds to my post on
+comp.lang.tcl. In the mean time, hopefully this version will work for
+you.
+
+

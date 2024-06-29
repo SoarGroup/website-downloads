@@ -1,0 +1,91 @@
+<Html>
+<Head>
+<Title>Soar</Title>
+<!-- Author: soar -->
+</Head>
+<Body>
+
+<h1><b>Soar Version 7.2 Release</b></h1>
+<p>
+This is the working page for the Soar 7.2 Release(9/1/98).   <!a HREF="Soar72.RelNotes">Release
+Notes</a> are under construction and will be available shortly. Soar
+7.2 requires Tcl7.6 and Tk4.2 on all systems (Mac, Windows and Unix).
+If you are already running Eaters, TankSoar, or the AAAI-97 version
+of Soar (Soar 7.1), you already have Tcl7.6 and Tk4.2. If you are upgrading
+from Soar 7.0.*, or don't have Soar at all yet, you will have to check
+to see if you have Tcl, and if so, what version you have. Soar 7.2
+is also compatible with Tcl 8.0, but it does requires that you rebuild
+Soar, linking with Tcl/Tk8.0.  The binaries provided below were built
+for Tcl 7.6/Tk4.2.  The README.(systype) files in the distribution
+will tell you how to check for Tcl on your system, and what to do if
+you don't have it. 
+<hr>
+
+<h1>Soar 7.2 for Windows</h1>
+<li><a HREF="Soar72.EXE"><strong>Soar72.EXE</strong></a>.
+(2.7 Mb) The self-installing binaries for Windows 95 / Windows NT (and
+possibly even Windows 3.1 with Win32s installed, but we haven't tested
+that). 
+<p>
+The standard installation location for Tcl/Tk on Windows is in "C:\Program
+Files\TCL" If you don't see Tcl there, first do a File Find on your
+system to see if someone installed Tcl somewhere else. If you don't
+have Tcl7.6/Tk4.2 already installed on your system, grab the <a HREF="http://www.tcl.tk/software/tcltk/7.6.html"><strong>Windows
+3.1, Windows 95, and Windows NT self-extracting installer (tcl7_6/win76p2.exe)</strong></a>:
+(about 1.5 Mbytes) The file is a self-extracting executable. It will
+install the Tcl and Tk libraries, the <code>wish</code> and <code>tclsh</code>
+programs, and documentation. 
+<p>
+THEN, because we think these Tcl/Tk binaries are slightly buggy, we
+recommend that you apply the following <strong> <a HREF="win32-tcltk-patch.zip">
+patches</strong></a>. that Chris Waterson developed, using the <a HREF="README.win32-tcltk-patch">README</a>
+file he wrote. This should clear up any segfaults that appear on some
+systems when exiting Soar. If Tcl/Tk was previously installed on your
+system and you get the seg faults when you exit Soar, you should install
+the patches. If you choose not to install these patches, you will probably
+get warning messages from the Windows operating system whenever you
+exit Soar. They are usually pretty harmless, although some people have
+reported that they have occasionally had to reboot after these errors.
+
+<p>
+If at all possible, use the defaults for file locations and installation
+settings. Soar-7.2 will require no reconfiguration for your Windows
+system if you have installed Tcl/Tk on the C: drive (specifically in
+"C:\Program Files\TCL", and if Soar is unzipped to c:\ (it will default
+to a folder called Soar-7.2). Just open the Soar-7.2 folder and dbl-click
+on the Soar icon (a feather, for now) to start Soar. If you need to
+use locations other than the defaults, or if you aren't able to run
+Soar by dbl-clicking on the Soar icon, see the <a href="README.Win">README.Win</a>
+file for information about what you will need to change to run Soar.
+
+<hr>
+
+<h1>Soar 7.2 for Macintosh </h1>
+<li><a HREF="Soar72.sea.hqx"><strong>Soar72.sea.hqx</strong></a>.
+(6.9 Mb) A BinHex 4.0 self-extracting archive that includes the binary
+distributions for Power PC Macs. This archive also includes the Tcl/Tk
+Installer for installing Tcl7.6/Tk4.2. (If you already have this version
+of Tcl/Tk installed, you can just dump the Installer program in the
+trash.) Download and extract the Soar archive file (by dbl-clicking
+on the Soar-72.sea icon), which will create a folder called Soar-7.2.
+See the <a href="README.Macintosh">README.Macintosh</a> file to
+get started. 
+<hr>
+
+<h1>Soar 7.2 for Unix </h1>
+<li><a HREF="Soar72.tgz"><strong>Soar72.tgz</strong></a>.
+(2.1 Mb) A gnu-zipped tar file which includes the precompiled libraries
+for Linux. See the <a href="README.Unix">README.Unix</a> file for
+information on running Soar and on building Soar for other Unix systems.
+If there is enough demand, we can possibly build and post libraries
+for SunOS 4.1.3, Solaris 5.5.1, Linux 2.0.30, and IRIX 5.3. If you
+need to install Tcl7.6 and Tk4.2, you can obtain the code and follow
+the instructions found on the <a HREF="http://www.tcl.tk/software/tcltk/7.6.html"><strong>Scriptics
+Tcl7.6 Download Page</strong></a>. About a third of the way down that
+page you'll find the info for Unix sources. 
+<hr>
+
+
+</Body>
+</Html>
+

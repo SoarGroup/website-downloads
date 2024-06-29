@@ -1,0 +1,429 @@
+Soar 7.3 Release Notes
+
+These are the Release Notes for Soar version 7.3, released March 1999.
+As of this writing, releases are available for Windows and Unix.
+It is expected that the same source code will work on Macintoshes,
+however, it's possible that when that build is done, a few minor 
+changes will be required for the Macintosh.  If that's the case, an
+announcement will be made with the Mac release.
+
+Soar 7.3 is available at http://ai.eecs.umich.edu/soar/soar73.html
+
+These release notes are divided into the following sections:
+
+	Distribution changes
+
+	User Interface changes (including TSI2.5)
+
+	Kernel and architectural changes
+
+	Bugs addressed
+	(a buglist status report will be available on the web site April 99)
+
+	Demos	
+	
+	Documentation
+	
+
+Soar 7.3 Distribution Changes
+=============================
+
+Since version 7.1, Soar has been distributed as a dynamically loadable
+library extension to Wish, the Tool Command Language (Tcl) graphical
+shell.  Binaries are provided for Linux, Windows and MacOS 8.
+Support for Mac 68K, Windows 3.1, and DOS has been discontinued.  The
+build files and Makefiles still support building a single monolithic
+executable version of Soar, but this is no longer the default
+configuration.
+
+The precompiled Soar 7.3 libraries are built for Tcl version 8.0.  
+Tcl 8.0 provides a more native look-and-feel across all platforms, 
+and includes a byte compiler for better performance.  There are other
+additions as well, see http://www.scriptics.com/software/8.0.html
+for detailed information on Tcl 8.  A few incompatibilities were
+introduced, which can be reviewed at
+http://www.scriptics.com/software/8.0.html#incompatibilities
+
+Soar 7.3 is source code compatible with Tcl 7.6 and Tk 4.2, so 
+users who do not wish to upgrade to Tcl 8.0 (although it's highly
+recommended that you do) can rebuild Soar 7.3 for Tcl7.6/Tk4.2.
+The Soar 7.3 library on linux appears to be binary compatible
+with Tcl 7.6, so users possibly won't have to rebuild on linux.
+
+The startup script "start-soar.tcl" found in the top-level folder
+(subdirectory) of the distribution provides a uniform method for
+invoking Soar across all supported platforms.  Also provided in
+the Windows and Macintosh distribution are icons (shortcuts) for
+starting Soar.  Read the comments in the file for details on
+what is being defined and why.
+
+To build an application area (folder or directory) in a location
+different from the Soar installation location, users need only
+copy the start-soar.tcl script to the new location and edit the
+file to redefine the location of the $soar_library Tcl variable.
+
+
+Soar 7.3 User Interface changes (including TSI2.5)
+==================================================
+
+The CUSP additions that only ever made it into the "internal"
+releases at CMU, have now been added to the distribution.
+The CUSP task numbers are given here, but more detailed information
+will have to be retrieved and added later.  Added B1, B2, B8, B11, B14
+
+For complete usage information on any command, see the command
+documentation is doc/cat.
+
+
+1. Restored commands:
+
+Several commands from Soar 6 and Soar 7.0.0beta were converted
+to variables in later versions of Soar.  While that cleaned up
+the commandname space, it eliminated the user's ability to
+abbreviate these long names, and also took away any kind of
+error checking on spelling.  If a commandname is mispelled,
+Tcl returns an error.  If a variable is mispelled, Tcl happily
+creates a new variable, and the user has not achieved the desired
+effect.  The following commands have been restored:
+
+attribute-preferences-mode
+default-wme-depth
+max-chunks
+max-elaborations
+o-support-mode
+
+The variables (which are the same names except with underscores instead
+of dashes) have been retained, so code changes are not strictly
+required.  Help pages are listed under the commandname, but give
+information about the variables as well.
+
+
+2. New Commands:
+
+chunk-name-format  is a new command which allows users to set the
+		   prefix string used when naming chunks (CUSP)
+
+3. Modified Commands:
+
+excise		added -default and -user args
+format-watch	added %nl  newline
+io		id is now required for -add -output (addresses bug 131)
+init-soar	no longer spits out all the useless trace information (CUSP)
+print		added -filename (CUSP B11)
+		-name v.s -full for productions cleaned up
+quit		explicit closing of log files added to prevent
+			loss of data on windows and mac
+rete-net	file access_method changed to binary so	
+			files will be portable across all platforms
+			(windows was interpreting some ascii strings as eof)
+pref		o-supported prefs indicated with "  :O " instead of "[O]"
+sp		some changes to parsing for slightly better error reporting
+		forced unary prefs can now occur when an binary pref is	
+			followed by , ) ^ or another preference specifier
+stats		added -chunk-count to return number of chunks (CUSP B14)
+stop-soar	added -self and optional reason-string
+			stop-soar -self stops only the issuing agent
+			reason string allows users to identify why it
+			was stopped 
+watch		can watch specific wmes (CUSP-B2)
+		args: -all -default -chunks -justifications -user 
+			can stand alone or modify "productions" bug 201,231
+
+4.  other changes
+
+added "step" alias:  run 1 d;  provides same "command" as TSI interface
+
+
+5. TclSoar Interface (TSI) changes:
+
+Soar 7.3 is distributed with the TclSoar Interface (TSI) v 2.5.
+The TSI is the default interface for running Soar.  If users prefer
+to not invoke the TSI, they should edit "start-soar.tcl"
+Briefly the changes from TSI 2.4 to TSI 2.5 include:
+	- support for history so users can easily retrieve
+	  previously-issued commands
+	- command abbreviation, which allows users to issue only
+	  a unique prefix instead of having to type the entire command
+	- improved demos and help facility
+	- menu for viewing/pwatch'ing user productions
+The TSI is located in the "library" folder (subdirectory) of the
+Soar distribution.  The README file includes a detailed description
+of the TSI.  A "Changes" file for version 2.5 is available on
+the TSI web page:  http://ai.eecs.umich.edu/soar/tsi.html
+
+
+
+Soar 7.3 Kernel and architectural changes
+=========================================
+
+The changes to the kernel are for bug fixes and CUSP updates.
+
+The only "significant" architectural change from Soar 7.2 to 7.3
+is to the fake preferences created in fake instantiations when
+backtracing thru ^item augmentations (which are architectural wmes).
+The preference created was changed from being a REQUIRE to being
+an ACCEPTABLE.  This cleaned up a bug that occurred that could occur
+when a require was returned from lower in the stack than an
+acceptable pref, but then the stack was popped before the slot
+was re-decided.  The upshot is, if you depend on backtracing the pref
+of an architectural wme for ^item to a REQUIRE, you may need to rewrite
+your code.
+
+new agent structure parameters:
+	wme_filter_list
+	chunk_name_prefix
+	USE_LONG_CHUNK_NAMES
+	alternate_input_exit
+
+tracing off while init-soar'ing
+
+added ability to watch specific wmes
+
+new chunk-naming facility added
+
+
+
+Soar 7.3 Demos	
+==============
+
+Better access to the demos is provided through improvements in the TSI.
+See the Demo Menu.  Also added Tim Chapman's "Tower Noticing" 
+tower-of-hanoi demo.
+
+
+Soar 7.3 Documentation
+======================
+
+All Man Pages (Help) pages were reviewed and many (most) were updated.
+New pages were written for rhs functions and the tsi.  The html versions
+are also now posted on the Documentation Page of the Soar web site.
+
+We're not sure if there will be a User's Manual specific to Soar 7.3.
+If by amending the User Interface Chapter of the Soar 7.1 Manual,
+we can create an accurate document, then there may be a manual.
+Soar community members are welcome to provide assistance on this task.
+
+
+
+Bugs addressed
+==============
+A buglist status report will be available on the web site April 99.
+The buglist can be retrieved via email by send an empty message
+with the subject "bug list" (no quotes) to soar-bugs@umich.edu.
+For the complete info send an empty message with the subject
+"help" to soar-bugs@umich.edu
+
+The following bug reports were addressed/resolved in Soar 7.3:
+(subject and original reporter name given)
+
+22   preferences command for an entire object
+27   better report on init-soar/watch 3 problem (ritter)
+54   Soar7/Ifor problem (gratch) 
+55   flipping preferences gives a syntax error (gap)
+74   Problems with log command (thead)
+134  don't see gui.tcl in Soar 7.0.4 (schwamb)
+161  print command (akyurek)
+219  Man pages for RHS functions (thead)
+228  Bugs etc. in MacSoar 7.0.5b (R.M.Young)
+232  Core dump on int rhs action (rogers))
+235  including chapman's ToH code in distribution (ritter)
+239  Solaris SOAR Bug fix (aarora)
+268  Bug in rete.c (koss)
+271  Require preferences bug (koss)
+
+A number of bug reports have been "resolved" (moved from the active list),
+by virtue of them having become obsolete because of changes in Soar,
+or having been answered in followup messages or posted to the FAQ.
+
+4  bug references 508
+5  bug references 510 
+9  Max-chunks
+10 bug references 611 
+11 Compiler warning about symbol_type
+12 Abort Problem (Soar 6.2.3 PSCM)
+44 Problems with directories in Soar 7
+49 Passing strings in and out of Soar using Tcl
+52 remove_input_wme
+68 bug in excise -all
+201 watch 
+207 Strange "select-interpreter" behavior in initialization
+212 soarquestion
+216 debugging question
+218 preferences can core dump soar7.0.4
+220 Problems running SOAR under Linux
+221 diffs between 6 & 7 in the manual
+222 Urgent Soar Problem! Help!
+223 August 31 departure
+225 soar io cleaning
+226 test with real data
+227 testing (junk mail - ignore) 
+229 Clarification of 7.0.5 changes
+237 [Soar] I have a question.
+241 bug ref 55 
+242 bug ref mechanism doesn't work?
+246 why production matches three times
+252 sample programs for winsoar
+257, 258, 259, 260, 261 help 
+263 compiling Linux 
+
+
+The following bug reports were "killed" (deleted entirely from the
+bug tracking system) because they were not bug reports.  Most were
+spam or test messages of the bug tracking system.
+
+243 (help)
+224 (Subject: bug list)
+233 () from Perspectives@mnet.fr
+234 (bug list)
+236 (bug list)
+238 ()
+245 ("bug list")
+250 (Spanish Language Translator)
+251 (Special translations needed?)
+253 (help)  don@eecs.umich.edu
+254 (help)  kcoulter@eecs.umich.edu
+255 (bug list)
+256 (bug list)
+262 (Crystal Translations)
+264 
+266 (Online Marketing)
+270 (English-Spanish Technical Translator)
+
+
+
+end of Release Notes
+*************************************************************************
+=========================================================================
+Code changes: Soar 7.3  vs. Soar 7.2
+
+This is a cryptic shorthand summary of the code changes from 7.2 to 7.3.
+(It was a lot more work than it looks!)
+
+
+Library diffs:
+==========================================================================
+
+7.3 built with Tcl8.0
+7.2 built with Tcl 7.6 / Tk 4.2
+but either one is code-compatible with either version of Tcl
+
+TSI differences 2.4 vs. 2.5
+
+soar.tcl:  new version number
+	   added alias step "run 1 d"  for TSI compat
+
+
+
+Interface diffs:
+==========================================================================
+
+soar.h:		added CUSP B-10 declarations as comments.  not yet implemented
+soarAgent.c:	initialize new agent struct members
+	 	current_agent(alternate_input_exit) = FALSE;/* Soar-Bugs #54
+		strcpy(current_agent(chunk_name_prefix),"chunk"); /*kjh(B14)*/
+		current_agent(wme_filter_list)    = NIL; /* kjh(CUSP-B2) */
+		CUSP-B8 config flags added, but not to version_string...
+soarArgv.c:	none
+soarCommands.c:	added commands back in that were changed to variables
+		chunk-name-format command added
+		added -user and -default to excise cmd
+		added %nl to format-watch 
+		io cmd:  id is required for -add -output  bug #131
+		info about log file status, bug #74
+		print cmd:  added -filename (CUSP B11)
+			    soarbugs #161  -name vs. -full for prods
+			    soarbugs #54
+			    soarbugs #58  close log file when "quit" cmd 
+		code for RecordCmd ReplayCmd (commented)  CUSP B-10
+		ReteNet file access_method changed to binary for windoze
+		chunk-count (CUSP B-14)
+		stop-soar cmd:  added -self reason-string
+		watch cmd:  parses like doc says it does:  
+			        -audcj can modify "productions"	
+			    can watch specific wmes  CUSP B2
+soarCommandUtils:  record and print filename for productions
+		bug fix for Solaris when printing .........
+		print_pref  "  :O"  instead of "[O]"
+		CUSP B2:  make_symbol_for_current_lexeme
+			  wme_filter_struct added
+			  wmes_filter_add
+			  wmes_filter_remove
+			  wmes_filter_reset
+			  wmes_filter_list
+			  wme_filtering_component_match
+			  passes_wme_filtering
+			  parse_filter_type
+		soar_alternate_input patch for bug #54
+		do_print_for_production_name
+		do_print_for_production_group
+soarInterp.c:	none
+soarLog.c:	none
+soarMain.c:	none
+soarScheduler.c:none
+soarVars.c:	none
+
+
+Kernel diffs:
+==========================================================================
+agent.c:  	Tom's patch for Soar-Bugs #54
+backtrace.c :  	none
+callback.c:	Ken's CUSP additions for read/record added as comments
+chunk.c: 	CUSP additions
+		chunk name format support	
+		routines: find_goal_at_stack_level
+			  find_impasse_wme_value
+			  generate_chunk_name_cym_constant
+decide.c:	Tom's patch for bug #103
+		Ken's CUSP additions for Soar_Read added as comments
+explain.c:	save-backtraces ==> save_backtraces  in msg to user
+init_soar.c:	added CUSP current_agent(USE_LONG_CHUNK_NAMES) flag
+		tracing off while init-soaring
+interface.c:	none
+io.c:		none
+lexer.c:	Tom's patch for bug #54
+ma_interface.c:	none
+main.c:		none
+mem.c:		none
+osupport.c:	none
+parser.c:	preferences fix for bug #55
+		bool function is_preference_lexeme
+		Forced unary preferences can now occur when a binary
+		preference is followed by a ",", ")", "^" or any
+		preference specifier
+prefmem.c:	none
+print.c:	o-supported prefs denoted by "  :O "  instead of "[O]"
+		support for tracing wmes  (CUSP-B2)
+		filtered_print_wme_add
+		filtered_print_wme_remove
+production.c:	none
+recmem.c:	none
+reorder.c:	none
+rete.c:		initialized prod->filename = NIL; prod->p_node = NIL;
+rhsfun.c:	CUSP B-10  Soar_Read added as comments
+rhsfun_math.c:	fixed bug for rhsfun "int" which crashed (S. Rogers)
+scheduler.c:	none
+soarkernel.h:	version changed to 7.3
+		new sys_param - USE_LONG_CHUNK_NAMES
+		#define kChunkNamePrefixMaxLength 64
+		current_agent struct additions:
+			char  chunk_name_prefix[kChunkNamePrefixMaxLength]; 
+			list  * wme_filter_list; /* kjh(CUSP-B2) */
+			bool  alternate_input_exit; /* Soar-Bugs #54, TMH *
+symtab.c:	none
+tempmem.c:	line 71:   if (!id) return NIL;  /* fixes bug #135 kjh */
+tilde.c:	none
+trace.c:	%newline added for format_watch cmd
+		print_object_trace_using_provided_format_string  CUSP-B1
+wmem.c:		support for tracing wmes  CUSP-B2
+		calls filtered_print_wme_[add|remove] instead of print "<=WM:"
+
+
+
+
+
+
+
+
+
+
+
