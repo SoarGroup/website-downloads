@@ -1,0 +1,265 @@
+<HTML>
+
+<HEAD>
+<TITLE>Registration for the 23rd Soar Workshop</TITLE>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var empty = new Image(); empty.src = "./images/fieldempty.gif";
+
+var haveerrors = 0;
+function showImage(imagename, imageurl, errors) {
+document[imagename].src = imageurl;
+if (!haveerrors && errors) haveerrors = errors;
+}
+
+function validate(f) {
+haveerrors = 0;
+(f.first_name.value.length < 2) 
+? showImage("first_nameerror", "./images/fieldempty.gif", true)
+: showImage("first_nameerror", "./images/blank.gif", false);
+
+(f.last_name.value.length < 3) 
+? showImage("last_nameerror", "./images/fieldempty.gif", true)
+: showImage("last_nameerror", "./images/blank.gif", false);
+
+(f.institution.value.length < 3) 
+? showImage("institutionerror", "./images/fieldempty.gif", true)
+: showImage("institutionerror", "./images/blank.gif", false);
+
+(f.email.value.length < 4) 
+? showImage("emailerror", "./images/fieldempty.gif", true)
+: showImage("emailerror", "./images/blank.gif", false);
+
+(f.address1.value.length < 5) 
+? showImage("addresserror", "./images/fieldempty.gif", true)
+: showImage("addresserror", "./images/blank.gif", false);
+
+(f.city.value.length < 3) 
+? showImage("cityerror", "./images/fieldempty.gif", true)
+: showImage("cityerror", "./images/blank.gif", false);
+
+
+return (!haveerrors);
+}
+
+//  End -->
+
+
+</SCRIPT>
+</HEAD>
+
+
+
+<BODY bgcolor=#ffffff>
+
+<H1>Registration for the 23rd Soar Workshop</H1>
+
+
+<FORM ACTION="../cgi-bin/workshop-reg.cgi" METHOD="POST" onSubmit="return validate(this)">
+
+<TABLE>
+
+<TR>
+<td colspan=4>Please fill out the registration form below...<BR>
+<SUP>(<font color="#ff0000">*</FONT> denotes required field).</SUP></TD>
+</TR>
+<tr><td colspan=6><hr></td></tr>
+
+<TR>
+<TD><p align=right>
+Title:</TD>
+<TD>
+<input type=text name="title" size=4 maxlength=50><font color="#ff0000"></FONT><BR>
+<img src="./images/weeblank.gif" width=20 height=10 border=0>
+</TD>
+<TD><p align=right>
+First Name:</TD>
+<TD>
+<input type=text name="first_name" size=15 maxlength=20><font color="#ff0000">*</FONT><BR>
+<img name=first_nameerror src="./images/blank.gif" width=150 height=10 border=0></TD>
+<TD><p align=right>
+Last Name:</TD>
+<TD>
+<input type=text name="last_name" size=20 maxlength=30><font color="#ff0000">*</FONT><BR>
+<img name=last_nameerror src="./images/blank.gif" width=150 height=10 border=0></TD>
+
+</TR>
+<TR>
+<TD><p align=right>
+Institution:</TD>
+<TD colspan=5>
+<input type=text name="institution" size=45 maxlength=50><font color="#ff0000">*</FONT><BR>
+<img name=institutionerror src="./images/blank.gif" width=150 height=10 border=0></TD>
+</TR>
+
+<tr><td colspan=6><hr></td></tr>
+<tr><td colspan=3> <h3>Contact Information:</h3></td></tr>
+<tr>
+<TD colspan=2><p align=right>
+E-Mail:</TD>
+<TD colspan=4>
+<input type=text name="email" size=30 maxlength=40><font color="#ff0000">*</FONT><BR>
+<img name=emailerror src="./images/blank.gif" width=150 height=10 border=0></TD>
+</tr>
+<tr>
+<TD colspan=2><p align=right>
+Address:</TD>
+<TD colspan=4>
+<input type=text name="address1" size=30 maxlength=40><font color="#ff0000">*</FONT><BR>
+<img name=addresserror src="./images/blank.gif" width=150 height=10 border=0></TD>
+</tr>
+
+<tr>
+<TD colspan=2><p align=right>
+Address (Line 2):</TD>
+<TD colspan=4>
+<input type=text name="address2" size=30 maxlength=40><BR>
+<img src="./images/weeblank.gif" width=20 height=10 border=0></TD>
+</tr>
+
+<tr>
+<TD colspan=2><p align=right>
+City:</TD>
+<TD colspan=2>
+<input type=text name="city" size=30 maxlength=40><font color="#ff0000">*</FONT><BR>
+<img name=cityerror src="./images/blank.gif" width=150 height=10 border=0></TD>
+</tr>
+
+<tr>
+<TD colspan=2><p align=right>
+State/Province:</TD>
+<TD colspan=2>
+<input type=text name="state" size=10 maxlength=15><font color="#ff0000">*</FONT><BR>
+<img name=stateerror src="./images/blank.gif" width=150 height=10 border=0></TD>
+</tr>
+
+<tr>
+<TD colspan=2><p align=right>
+Postal Code:</TD>
+<TD colspan=2>
+<input type=text name="zip" size=10 maxlength=15><font color="#ff0000">*</FONT><BR>
+<img name=ziperror src="./images/blank.gif" width=150 height=10 border=0></TD>
+</tr>
+
+<tr>
+<TD colspan=2><p align=right>
+Country:</TD>
+<TD colspan=2>
+<input type=text name="country" size=10 maxlength=15><BR>
+<img src="./images/weeblank.gif" width=20 height=10 border=0></TD>
+</tr>
+
+
+<tr><td colspan=6><hr></td></tr>
+<tr><td colspan=3> <h3>Fee:</h3></td></tr>
+<tr><td colspan=3> Please check one: </td></tr>
+<tr><td colspan=5>
+<p><input type="radio" name="fee" value="SendingCheck" checked> I will send a 
+check for $50 payable to the University of Michigan by June 1st, 2003.  Do not send cash.
+<p><input type="radio" name="fee" value="PayingAtWorkshop"> I will pay the $50 registration fee at the workshop.
+<p><i>Payments can be sent to:</i><br>
+Soar Workshop / AI Lab <br>
+1101 Beal Ave. <br>
+Ann Arbor, MI 48109-2110 <br>
+USA<br>
+<p>
+</td></tr>
+
+<tr><td colspan=6><hr></td></tr>
+<tr><td colspan=3> <h3>How You Plan To Participate:</h3></td></tr>
+<tr><td colspan=6><table width="100%">
+
+
+<TR valign="top"><td>
+<table><tr>
+<td colspan=2>Tutorials:<br><HR> </TD>
+</TR>    
+<tr>
+<td><input type=checkbox name="tutorial1"></td>
+<td> Introduction to Soar (M/Tue, June 23-24)</td>
+</tr>
+<tr>
+<td><input type=checkbox name="tutorial2"></td>
+<td> Interfacing Soar to other systems (Tuesday, June 24)</td>
+</tr>
+<tr>
+<td><input type=checkbox name="tutorial3"></td>
+<td> NL-Soar (Tuesday, June 24)</td>
+</tr>
+</table>
+
+</td><td>
+<table><tr>
+<td colspan=2>Talks: <i>(typical duration is 15min)</i><br><HR> </TD>
+</TR><tr>
+<td> <i>Title:</i> </td><td><i> Duration:</i></td>
+<tr>
+<td><input type=text name="title1" size=25 maxlength=55></td>
+<td><select name="duration1">
+<option>15 min
+<option>5 min
+<option>30 min
+</select></td>
+</tr>
+<tr>
+<td><input type=text name="title2" size=25 maxlength=55></td>
+<td><select name="duration2">
+<option>15 min
+<option>5 min
+<option>30 min
+</select></td>
+</tr>
+<tr>
+<td><input type=text name="title3" size=25 maxlength=55></td>
+<td><select name="duration3">
+<option>15 min
+<option>5 min
+<option>30 min
+</select></td>
+</tr>
+
+
+</table>
+
+</td><td>
+<table><tr>
+<td colspan=2>Activities:<br><HR> </TD>
+</TR><tr>
+<td><input type=checkbox name="FriDinner"></td>
+<td> Tuesday Dinner </td>
+</tr>
+<tr>
+<td><input type=checkbox name="SatDinner"></td>
+<td> Thursday Dinner<br>(Additional Fee ~$15) </td>
+</tr>
+</table>
+
+</td></tr>
+</table>
+</TR>    
+
+<tr><td colspan=6><hr></td></tr>
+<tr><td colspan=3> <h3>Other Information:</h3></td></tr>
+<tr><td colspan=5> If you have additional information you would like to provide the organizers, such as request for special dietary considerations or requests for more than three presentation slots, please enter it here: </td></tr>
+<tr><td colspan=5><textarea name="other" rows=7 cols=50></textarea></td></tr>
+
+
+
+<tr><td colspan=6><hr></td></tr>
+<TR>
+<TD><p align=center>
+</TD>
+<TD><p align=right>
+<input type=submit value="Enter"></TD>
+</TR>
+</TABLE>
+</FORM>
+<i>If this form does not work properly for you, please send the information above directly to:</i>
+<a href="mailto:jshawkin@eecs.umich.edu">jshawkin@eecs.umich.edu</a> and be sure to put "Soar Workshop Registration" in the subject heading.
+</BODY>
+</HTML>
+
+
