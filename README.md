@@ -4,6 +4,10 @@ This repository holds the binary files available for download at soar.eecs.umich
 
 ## Handling Large Files
 
-Files over 50MB should not be added to the repository directly; if you try to push such a file, you will get a warning message from GitHub, or the push will fail with an error if it is larger than 100MB. Instead, you should first track the files with [Git LFS](https://git-lfs.com/), which will tell GitHub to store the files in a separate location. Follow instructions on the Git LFS website to install it on your system, and then run `git lfs track <large file here>` for each large file you want to add. Then `git add .gitattributes` and `git add <large file here>`. Finally, commit and push as usual.
+Files over 50MB should not be added to the repository directly; if you try to push such a file, you will get a warning message from GitHub, or the push will fail with an error if it is larger than 100MB.
 
-Files in LFS are not directly downloadable via a permanent link. To get links that are usable on the website, you must also add the file to the [Large Files](https://github.com/SoarGroup/website-downloads/releases/tag/large_files_do_not_remove_this_tag) release page on GitHub.
+Instead, add the file to the appropriate [release](https://github.com/SoarGroup/website-downloads/releases) (or create a new one), and leave a note in a readme file in the appropriate directory explaining that the file is available in the release. As it is fairly easy to accidentally delete one of these files, it is recommended to keep a backup of the file on puff and elsewhere if convenient (such as OneNote). Video files should also be uploaded to our YouTube channel, @soarcognitivearchitecture2624.
+
+### Why we don't use Git LFS
+
+GitHub does support large file storage through [Git LFS](https://git-lfs.github.com/), but they have a bandwidth limit that is shared across the entire organization. This is very easy to hit, and if it is exceeded then it becomes impossible to pull or push any files in LFS, which is very inconvenient. It's also not possible to serve files from LFS through the website, so we would have to add the files to a release, anyway.
